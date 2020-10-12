@@ -1,0 +1,39 @@
+<idea-plugin>
+  <id>com.plug.zjt.plugin.id</id>
+  <name>devops-help</name>
+  <version>1.0</version>
+  <vendor email="123@qq.com" url="http://www.baidu.com">zjtCompany</vendor>
+
+  <description><![CDATA[
+      i am description.i am description.i am description.<br>
+      <em>http://www.baidu.com</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      no changes.no changes.no changes.<br>
+      <em>www.baidu.com</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <group id="BasePlugins" text="Devops" description="开发者门户">
+      <add-to-group group-id="MainMenu" anchor="last"/>
+      <action id="zjtplug" class="com.plug.zjt.action.MyPlug" text="AutoTest" description="using to test">
+        <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt K"/>
+      </action>
+    </group>
+  </actions>
+
+</idea-plugin>
